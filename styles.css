@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: 'Lora', serif, Georgia, Times, serif;
   font-size: 1.05rem;
   color: #333;
   background-color: #fdf8f2;
@@ -11,18 +11,41 @@ body {
   line-height: 1.6;
 }
 
+button:focus,
+input:focus {
+  outline: 2px solid #f6b2a1;
+  outline-offset: 2px;
+}
+
+.box-shadow-soft {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
 header {
   background: linear-gradient(to right, #b5c8b2, #d6e3cf);
   padding: 2rem;
   text-align: center;
   color: #fff;
 }
+
+.header-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  color: white;
+}
+
 nav a {
   margin: 0 1rem;
   text-decoration: underline;
-  color: #0c0c0c4d;
+  color: rgba(12, 12, 12, 0.7);
   font-weight: bold;
 }
+
+nav a:hover {
+  color: #f29487;
+  transition: color 0.3s ease;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -66,6 +89,7 @@ nav a {
   margin-top: 1.2rem;
   background-color: #f6b2a1;
   color: white;
+  cursor: pointer;
   padding: 0.6rem 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -164,16 +188,13 @@ nav a {
 
 footer {
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
   color: #888;
   background: #f0f0f0;
+  margin-top: 3rem;
 }
 
-footer {
-  margin-top: 3rem;
-  padding: 2rem;
-}
 
 .about-section {
   max-width: 800px;
@@ -198,6 +219,35 @@ footer {
   margin-bottom: 1.2rem;
   color: #4b3f3f;
 }
+
+#about-vitiligo {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-left: 5px solid #e38d6a;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-sidebar {
+    background-color: #fff7f3;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #e6ddd6;
+    max-width: 350px;
+    font-size: 1rem;
+    color: #4b3f3f;
+    flex: 1 1 35%;
+  }
+}
+
+/* ✅ Move this outside */
+input, button {
+  transition: all 0.3s ease;
+}
+
+
 
 .quote {
   font-style: italic;
@@ -229,19 +279,6 @@ footer {
     width: 100%;
     height: auto;
   }
-}
-
-.about-sidebar {
-  background-color: #fff7f3;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border: 1px solid #e6ddd6;
-  max-width: 350px;
-  font-size: 1rem;
-  color: #4b3f3f;
-   flex: 1 1 35%;
 }
 
 .about-container {
