@@ -151,16 +151,19 @@ nav a:hover {
 .gallery-caption {
   text-align: center;
   margin-top: 0.6rem;
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: bold;
   font-style: italic;
-  color: #5a4d4d;
-  background-color: rgba(255, 245, 240, 0.8);
-  padding: 0.5rem 1rem;
+  color: #2f2f2f; /* Darker text for better visibility */
+  background-color: rgba(255, 255, 255, 0.95); /* Light background */
+  padding: 0.7rem 1.2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   animation: floatIn 1.5s ease both;
+  backdrop-filter: blur(3px);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* ✅ This line right here */
 }
+
 
 @keyframes floatIn {
   from {
