@@ -167,8 +167,8 @@ nav a:hover {
   font-size: 1.2rem;
   font-weight: 900;
   font-style: italic;
-  color: #111; /* Darker text for better visibility */
-  background-color: rgba(255, 255, 255, 1); /* Light background */
+  color: #fff; /* Darker text for better visibility */
+  background-color: rgba(0, 0, 0, 0.75); /* Light background */
   padding: 0.7rem 1.2rem;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
