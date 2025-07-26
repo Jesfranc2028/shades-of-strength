@@ -6,7 +6,6 @@
   <title>Shades of Strength</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  
 </head>
 <body>
   <header>
@@ -26,7 +25,35 @@
       <p>This is a journey of self-discovery, healing, and motherhood—a celebration of life through the lens of vitiligo.</p>
     </div>
   </section>
+  
+  <section id="subscribe" style="max-width: 400px; margin: 2rem auto; text-align: center; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9;">
+    <h2 style="margin-bottom: 0.5rem;">Subscribe</h2>
+    <p style="font-size: 0.9rem; color: #555;">*Your information won't be shared with anyone.</p>
 
+    <form onsubmit="subscribeUser(event)">
+      <input type="email" id="emailInput" placeholder="Enter your email address" required
+             style="padding: 10px; width: 80%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <br>
+      <button type="submit"
+              style="padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Subscribe
+      </button>
+    </form>
+
+    <p id="confirmation" style="margin-top: 10px; color: green;"></p>
+  </section>
+  
   <footer>&copy; 2025 Shades of Strength. All rights reserved.</footer>
+  
+  <script>
+    function subscribeUser(event) {
+      event.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        document.getElementById('confirmation').innerText = `Thank you for subscribing, ${email}!`;
+        document.getElementById('emailInput').value = '';
+      }
+    }
+  </script>
 </body>
 </html>
